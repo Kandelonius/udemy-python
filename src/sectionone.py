@@ -44,9 +44,7 @@ string_with_double_quotes = "You can't have egg bacon spam and sausage without t
 multiline = """this
 is
 one
-string
-similar to /*
-*/"""
+string"""
 
 explanation = "manual string formatting can get tedius like what was done in line "
 line = 6
@@ -83,13 +81,13 @@ print(description.format("Bob", 30))
 description = "{} is {age} years old."
 print(description.format("Bob", age=30))
 
-my_name = "Jose"
-your_name = input("Enter your name: ")
+# my_name = "Jose"
+# your_name = input("Enter your name: ")
 
-print(f"Hello {your_name}. My name is {my_name}.")
-age = input("Enter your age: ")
-age_num = int(age)
-print(f"You have lived for {age_num*12} months... roughly.")
+# print(f"Hello {your_name}. My name is {my_name}.")
+# age = input("Enter your age: ")
+# age_num = int(age)
+# print(f"You have lived for {age_num*12} months... roughly.")
 
 #### challenge start ####
 
@@ -99,11 +97,78 @@ print(f"You have lived for {age_num*12} months... roughly.")
 # Secondly, ask the user for their age and convert it into a number.
 # Then, print out how many months that equals to (you'll have to multiply the age by 12).
 
-name = input("Please enter your name: ")
-print(f"Hello, {name}")
+# name = input("Please enter your name: ")
+# print(f"Hello, {name}")
 
-age = input("Please enter your age: ")
-int_age = int(age)
-print(f"{int_age*12}")
+# age = input("Please enter your age: ")
+# int_age = int(age)
+# print(f"{int_age*12}")
 
 #### challenge end ####
+
+# my_number = 5
+# user_number = int(input("Enter a number: "))
+
+# matches = my_number == user_number
+
+# print(f"You got it right? {matches}")
+
+x = True and False
+print(f"x = True and False: {x}")
+
+x = 35 and 0
+print(f"x = 35 and 0: {x}")
+
+x = 0 and 35
+print(f"x = 0 and 35: {x}")
+
+x = 35 and 1
+print(f"x = 35 and 1: {x}")
+
+x = 1 and 35
+print(f"x = 1 and 35: {x}")
+
+x = True or False
+print(f"x = True or False: {x}")
+
+x = 35 or 0
+print(f"x = 35 or 0: {x}")
+
+x = 0 or 35
+print(f"x = 0 or 35: {x}")
+
+x = 35 or 1
+print(f"x = 35 or 1: {x}")
+
+x = 1 or 35
+print(f"x = 1 or 35: {x}")
+
+name = ""
+surname = "Smith"
+
+greeting = name or f"Mr. {surname}"
+print(greeting)
+
+age = int(input("Enter your age: "))  #outputs True when given any number it seems
+side_job = True  # changing side_job to false actually shows when a different part
+print(age > 18 and age < 65 or side_job)  # is evaluated
+
+# lists
+
+friends = ["Rolf", "Bob", "Anne"]
+
+print(friends[0])
+print(friends[1])
+
+print(len(friends))
+
+friends = [["Rolf", 24], ["Bob", 30], ["Anne", 27]]
+
+friends[0][0] #prints Rolf
+friends[0][1] #prints 24 for Rofls age
+
+friends.append(["Jen, 32"])
+print(friends)
+
+friends.remove(["Rolf", 24])
+print(friends)
